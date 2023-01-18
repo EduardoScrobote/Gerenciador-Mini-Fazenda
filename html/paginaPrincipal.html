@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Fazenda Dash Board</title>
+    <link rel="stylesheet" href="../css/paginaPrincipal.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="idh1">Aqui você pode gerenciar sua fazenda</h1>
+        <h2 id="idh2">Vamos começar apenas com Soja!</h2>
+        <div id="calcu">
+            <label for="quantity">
+                Adicione o peso da sua carga de soja entregue:
+                <input type="number" id="quantity"><p class="add"></p>
+            </label>
+            <label for="value">
+                Adicione o valor de cada Saca no dia:
+                <input type="number" id="value"> <p class="add">
+            </label>
+            <button id="calculate">Calcular</button>
+        </div>
+    </div>
+</body>
+<script src="../js/calculadoraSoja.js"></script>
+</html>
