@@ -10,15 +10,26 @@
 <body>
     <div class="container">
         <h1 id="idh1">Aqui você pode gerenciar sua fazenda</h1>
-        <h2 id="idh2">Vamos começar apenas com Soja!</h2>
+        <h2 id="idh2">Vamos começar, escolha seu produto e a unidade, e abaixo digite o valor de venda</h2>
         <div id="calcu">
+            <select name="produ" id="product">
+                <option value="moybean">Soja</option>
+                <option value="corn">Milho</option>
+                <option value="strawberry">Morango</option>
+                <option value="wheat">Trigo</option>
+            </select>
+            <select name="unidade" id="unity">
+                <option value="saca">Saca</option>
+                <option value="kg">Kilo Grama</option>
+                <option value="box">Caixa</option>
+            </select>
             <label for="quantity">
-                Adicione o peso da sua carga de soja entregue:
+                Adicione a quantidade do seu produto:
                 <input type="number" id="quantity"><p class="add"></p>
             </label>
             <label for="value">
-                Adicione o valor de cada Saca no dia:
-                <input type="number" id="value"> <p class="add">
+                Adicione o valor do produto no dia:
+                <input type="number" id="valueDay"> <p class="add">
             </label>
             <button id="calculate">Calcular</button>
         </div>
