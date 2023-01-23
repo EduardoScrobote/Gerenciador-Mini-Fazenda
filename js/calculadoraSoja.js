@@ -6,27 +6,31 @@ button.addEventListener("click", () => {
     const quantity = Number(document.getElementById("quantity").value);
     const product = document.getElementById("product").value;
     const unity = document.getElementById("unity").value;
-    const calcu = document.getElementById("calcu")
+    const list = document.getElementById("earns")
     console.log(valueDay, quantity, product, unity)
+
     let calculo = (product, unity) => {
         if (product === "moybean" && unity === "saca") {
-            return calcu.innerHTML += (`<p>O valor total é ${quantity * valueDay}</p>`)
-        }  else if (product === "moybean" && unity === "kg") {
-            return calcu.innerHTML +=(`<p>O valor total é ${quantity / 60 * valueDay}</p>`)
-        }   else if (product === "corn" && unity === "saca") {
-            return calcu.innerHTML +=(`<p>O valor total é ${quantity * valueDay}</p>`)
-        }   else if (product === "corn" && unity === "kg") {
-            return calcu.innerHTML +=(`<p>O valor total é ${quantity / 60  * valueDay}</p>`)
-        }   else if (product === "wheat" && unity === "saca") {
-            return calcu.innerHTML +=(`<p>O valor total é ${quantity * valueDay}</p>`)
-        }   else if (product === "wheat" && unity === "kg") {
-            return calcu.innerHTML +=(`<p>O valor total é ${quantity / 60 * valueDay}</p>`)
-        }   else if (product === "strawberry" && unity === "box") {
-            return calcu.innerHTML +=(`<p>O valor total é ${quantity * valueDay}</p>`)
+            return list.innerText = (`${quantity * valueDay}`)
+        } else if (product === "moybean" && unity === "kg") {
+            return list.innerText = (`${quantity / 60 * valueDay}`)
+        } else if (product === "corn" && unity === "saca") {
+            return list.innerText = (`${quantity * valueDay}`)
+        } else if (product === "corn" && unity === "kg") {
+            return list.innerText = (`${quantity / 60 * valueDay}`)
+        } else if (product === "wheat" && unity === "saca") {
+            return list.innerText = (`${quantity * valueDay}`)
+        } else if (product === "wheat" && unity === "kg") {
+            return list.innerText = (`${quantity / 60 * valueDay}`)
+        } else if (product === "strawberry" && unity === "box") {
+            return list.innerText = (`${quantity * valueDay}`)
         } else {
-           calcu.innerHTML = `<p>Impossivel calcular</p>`
+            list.innerText = `Impossivel calcular`
         }
     };
-    return console.log(calculo(product, unity))
+    const earns = parseFloat(calculo(product, unity))
+    localStorage.setItem("earns", earns)
+    location.reload
+    return console.log(typeof (calculo(product, unity)))
 });
 
