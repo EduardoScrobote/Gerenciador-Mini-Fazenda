@@ -25,7 +25,7 @@ button.addEventListener("click", () => {
         } else if (product === "strawberry" && unity === "box") {
             return list.innerText = (`${quantity * valueDay}`)
         } else {
-            list.innerText = `Impossivel calcular`
+            list.innerText = `Este Produto não é vendido em caixas`
         }
     };
     const earns = parseFloat(calculo(product, unity))
